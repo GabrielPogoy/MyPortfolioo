@@ -1,0 +1,69 @@
+/* SKILLS SECTION */
+.skills {
+  background: linear-gradient(135deg, #1b263b, #0d1b2a);
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  animation: fadeUp 1s ease forwards;
+}
+
+.skills h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #00c6ff;
+  border-radius: 2px;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-list li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.skill-list li:nth-child(1) { animation-delay: 0.2s; }
+.skill-list li:nth-child(2) { animation-delay: 0.4s; }
+.skill-list li:nth-child(3) { animation-delay: 0.6s; }
+.skill-list li:nth-child(4) { animation-delay: 0.8s; }
+
+.skill-list li:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Optional glowing effect */
+.skill-list li:hover {
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+}
+
+/* Reuse Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
